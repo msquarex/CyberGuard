@@ -1,0 +1,155 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-section {
+  padding: 3rem 0 5rem;
+}
+
+.hero-content {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-icon.cyan {
+  background-color: rgba(8, 145, 178, 0.2);
+  color: #22d3ee;
+}
+
+.feature-icon.purple {
+  background-color: rgba(109, 40, 217, 0.2);
+  color: #a855f7;
+}
+
+.feature-icon.green {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.feature-link {
+  text-decoration: none;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
+.feature-link.cyan {
+  color: #22d3ee;
+}
+
+.feature-link.purple {
+  color: #a855f7;
+}
+
+.feature-link.green {
+  color: #34d399;
+}
+
+.info-section {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.75rem;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.info-icon {
+  background-color: rgba(8, 145, 178, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #22d3ee;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info-description {
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .features-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-content {
+    flex-direction: row;
+  }
+}
+

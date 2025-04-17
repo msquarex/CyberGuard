@@ -1,0 +1,159 @@
+.news-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.news-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.news-header p {
+  color: var(--text-muted);
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.news-card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.news-card:hover {
+  border-color: var(--border-light);
+}
+
+.news-card-content {
+  padding: 1.5rem;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.news-category {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.category-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.category-icon.vulnerability {
+  color: #f59e0b;
+}
+
+.category-icon.attack {
+  color: #ef4444;
+}
+
+.category-icon.phishing {
+  color: #f59e0b;
+}
+
+.category-icon.policy {
+  color: #3b82f6;
+}
+
+.category-icon.default {
+  color: var(--primary);
+}
+
+.category-name {
+  text-transform: capitalize;
+}
+
+.meta-separator {
+  margin: 0 0.25rem;
+}
+
+.news-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.news-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.news-summary {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-source {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.news-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--primary);
+  font-size: 0.875rem;
+}
+
+.news-link:hover {
+  color: var(--primary-hover);
+}
+
+@media (min-width: 768px) {
+  .news-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.load-more-button {
+  min-width: 200px;
+}
+
+.load-more-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+

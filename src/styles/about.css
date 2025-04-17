@@ -1,0 +1,20 @@
+.about-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 56px;
+}
+
+.team-member {
+  max-width: 200px;
+}
+
+.team-image {
+  width: 100%;
+  border-radius: 50%; /* Make images circular */
+} 

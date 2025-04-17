@@ -1,0 +1,200 @@
+/* Global styles */
+:root {
+  /* Light theme variables */
+  --background-light: #ffffff;
+  --foreground-light: #111827;
+  --primary-light: #0891b2;
+  --primary-hover-light: #0e7490;
+  --secondary-light: #6d28d9;
+  --secondary-hover-light: #5b21b6;
+  --accent-light: #10b981;
+  --accent-hover-light: #059669;
+  --danger-light: #be185d;
+  --danger-hover-light: #9d174d;
+  --border-light: #e5e7eb;
+  --border-light-hover: #d1d5db;
+  --text-muted-light: #4b5563;
+  --card-bg-light: #f9fafb;
+
+  /* Dark theme variables */
+  --background-dark: #111827;
+  --foreground-dark: #f9fafb;
+  --primary-dark: #0891b2;
+  --primary-hover-dark: #0e7490;
+  --secondary-dark: #6d28d9;
+  --secondary-hover-dark: #5b21b6;
+  --accent-dark: #10b981;
+  --accent-hover-dark: #059669;
+  --danger-dark: #be185d;
+  --danger-hover-dark: #9d174d;
+  --border-dark: #374151;
+  --border-dark-hover: #4b5563;
+  --text-muted-dark: #9ca3af;
+  --card-bg-dark: #1f2937;
+
+  /* Default to light theme */
+  --background: var(--background-light);
+  --foreground: var(--foreground-light);
+  --primary: var(--primary-light);
+  --primary-hover: var(--primary-hover-light);
+  --secondary: var(--secondary-light);
+  --secondary-hover: var(--secondary-hover-light);
+  --accent: var(--accent-light);
+  --accent-hover: var(--accent-hover-light);
+  --danger: var(--danger-light);
+  --danger-hover: var(--danger-hover-light);
+  --border: var(--border-light);
+  --border-hover: var(--border-light-hover);
+  --text-muted: var(--text-muted-light);
+  --card-bg: var(--card-bg-light);
+}
+
+/* Dark theme */
+.dark {
+  --background: var(--background-dark);
+  --foreground: var(--foreground-dark);
+  --primary: var(--primary-dark);
+  --primary-hover: var(--primary-hover-dark);
+  --secondary: var(--secondary-dark);
+  --secondary-hover: var(--secondary-hover-dark);
+  --accent: var(--accent-dark);
+  --accent-hover: var(--accent-hover-dark);
+  --danger: var(--danger-dark);
+  --danger-hover: var(--danger-hover-dark);
+  --border: var(--border-dark);
+  --border-hover: var(--border-dark-hover);
+  --text-muted: var(--text-muted-dark);
+  --card-bg: var(--card-bg-dark);
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--border);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button-cyan {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button-cyan:hover {
+  background-color: var(--primary-hover);
+}
+
+.button-purple {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.button-purple:hover {
+  background-color: var(--secondary-hover);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+}
+
+.loading-spinner::after {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.25rem solid var(--border-light);
+  border-top-color: var(--primary);
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  background-color: rgba(190, 24, 93, 0.2);
+  border: 1px solid var(--danger);
+  color: #fecdd3;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
