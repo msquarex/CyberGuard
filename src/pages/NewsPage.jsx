@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react"
 import "../styles/news.css"
-import { NEWS_API_KEY, NEWS_API_URL } from "../config"
+
 const NEWS_API_KEY = 'c49f3b0884ef43679a0c2142a544c2ff'; 
 const NEWS_API_URL = 'https://newsapi.org/v2/everything'; 
+
 export default function NewsPage() {
   const [news, setNews] = useState([])
   const [loading, setLoading] = useState(true)
