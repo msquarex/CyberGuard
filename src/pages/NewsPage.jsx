@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "../styles/news.css"
-import { NEWS_API_KEY, NEWS_API_URL } from "../config"
+import { 'c49f3b0884ef43679a0c2142a544c2ff', 'https://newsapi.org/v2/everything' } from "../config"
 
 export default function NewsPage() {
   const [news, setNews] = useState([])
